@@ -22,7 +22,7 @@ function Item(props) {
   }
 
   const handleClick = ()=>{
-    push('/item-update');
+    push(`/item-update/${id}`);
   }
 
   return (
