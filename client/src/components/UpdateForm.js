@@ -3,11 +3,11 @@ import { useParams, useHistory } from "react-router-dom";
 import axios from "axios";
 
 const initialItem = {
-  name: "",
-  price: "",
+  name: "Home item",
+  price: "123123123131312",
   imageUrl: "",
-  description: "",
-  shipping: ""
+  description: "asffdsfsdaf",
+  shipping: "adsfasdfs"
 };
 
 const UpdateForm = props => {
