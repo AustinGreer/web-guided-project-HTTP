@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Route, NavLink } from 'react-router-dom';
+import { Route, NavLink, useHistory } from 'react-router-dom';
 import axios from 'axios';
 
 import ItemDescription from './ItemDescription';
@@ -8,6 +8,7 @@ import ItemShipping from './ItemShipping';
 function Item(props) {
   const [item, setItem] = useState({});
   const { id } = props.match.params;
+  const history = useHistory();
 
   useEffect(()=>{
     axios.get(`http://localhost:3333/items/${id}`)
@@ -21,7 +22,7 @@ function Item(props) {
   }
 
   const handleClick = ()=>{
-    props.history.push('/');
+    history.push('/');
   }
 
   return (
