@@ -33,6 +33,7 @@ function Item(props) {
       props.setItems(res.data);
 
       //redirect to /item-list
+      push('/item-list');
     })
     .catch(err=> {
       //catch err
