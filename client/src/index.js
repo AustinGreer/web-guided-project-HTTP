@@ -55,7 +55,7 @@ const App = () => {
       {/* <Route exact path="/item-update/:id" render={(props)=>{
         return(<UpdateForm {...props} setItems={setItems}/>);
       }}/> */}
-      <Route>
+      <Route path="/item-form">
         <UpdateForm setItems={setItems}/>
       </Route>
     </div>
