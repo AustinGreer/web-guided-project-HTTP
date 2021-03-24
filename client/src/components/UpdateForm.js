@@ -27,7 +27,13 @@ const UpdateForm = props => {
   };
 
   useEffect(()=>{
-    
+    axios.get('http://localhost:3333/items/0')
+      .then(res=>{
+        console.log(res);
+      })
+      .catch(err=>{
+        console.log(err.response);
+      });
   }, []);
 
   const handleSubmit = e => {
