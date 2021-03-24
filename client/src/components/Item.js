@@ -26,7 +26,10 @@ function Item(props) {
   }
 
   const handleDeleteClick = ()=>{
-    
+    //delete request on my current id
+    //when I get my value back update my local state
+    //redirect to /item-list
+    //catch err
   }
 
   return (
