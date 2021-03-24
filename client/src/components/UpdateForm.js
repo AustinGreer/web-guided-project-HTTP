@@ -15,8 +15,6 @@ const UpdateForm = props => {
   // const id = props.match.params.id;
   const { id } = useParams();
 
-  console.log(props);
-
   const changeHandler = ev => {
     ev.persist();
     let value = ev.target.value;
@@ -46,7 +44,7 @@ const UpdateForm = props => {
     axios.put(`http://localhost:3333/items/${id}`, item)
     .then((res)=>{
       //if we get a response, console.log(res)
-      // setItems(res.data);
+      props.setItems(res.data);
       //redirect to item page for our current id
       props.history.push(`/item-list/${id}`);
     })
