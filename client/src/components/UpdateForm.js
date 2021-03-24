@@ -14,7 +14,8 @@ const UpdateForm = props => {
   const [item, setItem] = useState(initialItem);
   // const id = props.match.params.id;
   const { id } = useParams();
-
+  const { push } = useHistory();
+  
   const changeHandler = ev => {
     ev.persist();
     let value = ev.target.value;
@@ -47,7 +48,7 @@ const UpdateForm = props => {
       props.setItems(res.data);
 
       //redirect to item page for our current id
-      props.history.push(`/item-list/${id}`);
+      push(`/item-list/${id}`);
     })
     .catch(err=>{
       //if there is an error, console.log error
