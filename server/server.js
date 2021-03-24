@@ -177,6 +177,7 @@ server.post("/items", (req, res) => {
       res
     );
   }
+  
   const findItemByName = item => {
     return item.name === name;
   };
@@ -207,6 +208,7 @@ server.put("/items/:id", (req, res) => {
     if (imageUrl) foundItem.imageUrl = imageUrl;
     if (description) foundItem.description = description;
     if (shipping) foundItem.shipping = shipping;
+    
     res.json(items);
   }
 });
