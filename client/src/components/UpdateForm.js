@@ -42,6 +42,9 @@ const UpdateForm = props => {
     e.preventDefault();
     console.log('item ', item);
     //request for updating our item
+    //if we get a response, console.log(res)
+    //redirect to item page for our current id
+    //if there is an error, console.log error
   };
 
   return (
