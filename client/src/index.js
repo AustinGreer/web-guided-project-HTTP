@@ -27,6 +27,7 @@ const App = () => {
   }, []);
 
   const deleteItem = (id) => {
+    console.log(items.filter(item=>(item.id !== id)));
     setItems(items.filter(item=>(item.id !== id)));
   }
 
