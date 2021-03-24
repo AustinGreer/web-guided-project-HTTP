@@ -30,16 +30,14 @@ function Item(props) {
     axios.delete(`http://localhost:3333/items/${id}`)
     .then(res=> {
       //when I get my value back, update my local state
-      
-      console.log(res);
+      props.setItems(res.data);
+
+      //redirect to /item-list
     })
     .catch(err=> {
+      //catch err
       console.log(err);
     })
-    
-
-    //redirect to /item-list
-    //catch err
   }
 
   return (
