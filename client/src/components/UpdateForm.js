@@ -45,7 +45,7 @@ const UpdateForm = props => {
     .then((res)=>{
       //if we get a response, console.log(res)
       props.setItems(res.data);
-      
+
       //redirect to item page for our current id
       props.history.push(`/item-list/${id}`);
     })

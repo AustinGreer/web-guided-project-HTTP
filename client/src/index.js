@@ -53,13 +53,13 @@ const App = () => {
       />
       <Route path="/item-form" component={ItemForm} />
       
-      <Route exact path="/item-update/:id" render={(props)=>{
+      {/* <Route exact path="/item-update/:id" render={(props)=>{
         return(<UpdateForm {...props} setItems={setItems}/>);
-      }}/>
+      }}/> */}
 
-      {/* <Route path="/item-update/:id">
+      <Route path="/item-update/:id">
         <UpdateForm setItems={setItems}/>
-      </Route> */}
+      </Route>
     </div>
   );
 };
