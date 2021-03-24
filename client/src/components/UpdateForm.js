@@ -41,6 +41,7 @@ const UpdateForm = props => {
   const handleSubmit = e => {
     e.preventDefault();
     console.log('item ', item);
+    //request for updating our item
   };
 
   return (
