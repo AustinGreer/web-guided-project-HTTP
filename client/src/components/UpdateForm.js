@@ -40,8 +40,11 @@ const UpdateForm = props => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log('item ', item);
     //request for updating our item
+    axios.put(`http://localhost:3333/item/${id}`, item)
+    .then((res)=>{
+      console.log(res);
+    })
     //if we get a response, console.log(res)
     //redirect to item page for our current id
     //if there is an error, console.log error
