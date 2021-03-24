@@ -3,11 +3,11 @@ import { useParams, useHistory } from "react-router-dom";
 import axios from "axios";
 
 const initialItem = {
-  name: "Home item",
-  price: "123123123131312",
+  name: "",
+  price: "",
   imageUrl: "",
-  description: "asffdsfsdaf",
-  shipping: "adsfasdfs"
+  description: "",
+  shipping: ""
 };
 
 const UpdateForm = props => {
@@ -29,6 +29,8 @@ const UpdateForm = props => {
   const handleSubmit = e => {
     e.preventDefault();
   };
+
+  console.log(item);
 
   return (
     <div>
