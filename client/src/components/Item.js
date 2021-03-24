@@ -21,7 +21,7 @@ function Item(props) {
   }
 
   const handleClick = ()=>{
-    console.log(props);
+    props.history.push('/');
   }
 
   return (
