@@ -26,9 +26,9 @@ function Item(props) {
   }
 
   const handleDeleteClick = ()=>{
-    console.log("click");
+    
   }
-  
+
   return (
     <div className="item-wrapper">
       <div className="item-header">
