@@ -21,10 +21,14 @@ function Item(props) {
     return <h2>Loading item data...</h2>;
   }
 
-  const handleClick = ()=>{
+  const handleEditClick = ()=>{
     push(`/item-update/${id}`);
   }
 
+  const handleDeleteClick = ()=>{
+    console.log("click");
+  }
+  
   return (
     <div className="item-wrapper">
       <div className="item-header">
@@ -51,10 +55,10 @@ function Item(props) {
         path="/item-list/:id/shipping"
         render={props => <ItemShipping {...props} item={item} />}
       />
-      <button onClick={handleClick} className="md-button">
+      <button onClick={handleEditClick} className="md-button">
         Edit
       </button>
-      <button className="md-button">
+      <button onClick={handleDeleteClick} className="md-button">
         Delete
       </button>
     </div>
