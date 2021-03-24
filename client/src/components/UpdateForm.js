@@ -43,11 +43,16 @@ const UpdateForm = props => {
     //request for updating our item
     axios.put(`http://localhost:3333/item/${id}`, item)
     .then((res)=>{
+      //if we get a response, console.log(res)
       console.log(res);
+      //redirect to item page for our current id
+      props.history.push(`/item-list/${id}`);
     })
-    //if we get a response, console.log(res)
-    //redirect to item page for our current id
-    //if there is an error, console.log error
+    .catch(err=>{
+      //if there is an error, console.log error
+      console.log(err);
+    })
+    
   };
 
   return (
