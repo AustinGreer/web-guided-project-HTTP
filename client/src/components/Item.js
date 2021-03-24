@@ -29,12 +29,14 @@ function Item(props) {
     //delete request on my current id
     axios.delete(`http://localhost:3333/items/${id}`)
     .then(res=> {
+      //when I get my value back, update my local state
+      
       console.log(res);
     })
     .catch(err=> {
       console.log(err);
     })
-    //when I get my value back update my local state
+    
 
     //redirect to /item-list
     //catch err
