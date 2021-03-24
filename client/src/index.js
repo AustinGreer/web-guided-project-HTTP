@@ -42,6 +42,7 @@ const App = () => {
       </nav>
 
       <Route exact path="/" component={Home} />
+      <Route exact path="/item-list/edit" component={UpdateForm}/>
       <Route
         exact
         path="/item-list"
@@ -52,7 +53,7 @@ const App = () => {
         render={props => <Item {...props} setItems={setItems} />}
       />
       <Route path="/item-form" component={ItemForm} />
-      <Route path="/item-list/edit" component={UpdateForm}/>
+      
     </div>
   );
 };
