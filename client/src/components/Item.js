@@ -8,7 +8,7 @@ import ItemShipping from './ItemShipping';
 function Item(props) {
   const [item, setItem] = useState({});
   const { id } = props.match.params;
-  const history = useHistory();
+  const { push } = useHistory();
 
   useEffect(()=>{
     axios.get(`http://localhost:3333/items/${id}`)
@@ -22,7 +22,7 @@ function Item(props) {
   }
 
   const handleClick = ()=>{
-    history.push('/');
+    push('/');
   }
 
   return (
