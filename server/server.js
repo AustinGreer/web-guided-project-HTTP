@@ -220,7 +220,7 @@ server.delete("/items/:id", (req, res) => {
   if (foundItem) {
     const ItemRemoved = { ...foundItem };
     items = items.filter(item => item.id != id);
-    res.status(200).json(items);
+    res.status(200).json(id);
   } else {
     sendUserError("No item by that ID exists in the item DB", res);
   }
