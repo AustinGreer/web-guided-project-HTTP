@@ -14,7 +14,7 @@ const UpdateForm = props => {
   const [item, setItem] = useState(initialItem);
   const id = 0;
   
-  console.log(props.match.params.name);
+  console.log(props.match.params.id);
 
   const changeHandler = ev => {
     ev.persist();
